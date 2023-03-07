@@ -13,7 +13,9 @@ export default function GlobalLayout({ children }: { children: ReactNode }) {
   return (
     <div className={`container mx-auto px-6 md:px-0 h-full ${inter.className}`}>
       <Header />
-      <main className="w-full h-full">{children}</main>
+      <main id="main-content" className="w-full h-full">
+        {children}
+      </main>
       <Footer />
     </div>
   );
