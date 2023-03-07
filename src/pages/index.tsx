@@ -1,3 +1,3 @@
 export default function Page() {
-  return <>Home</>;
+  return <section className="overflow-auto h-full max-h-full">lorem1000</section>;
 }
