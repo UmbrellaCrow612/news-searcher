@@ -1,3 +1,33 @@
+import { useRouter } from "next/router";
+import { AiOutlineSearch, AiOutlineHome } from "react-icons/ai";
+
 export default function Header() {
-    return <header>Header</header>
+  const router = useRouter();
+  return (
+    <header className="navbar justify-between bg-base-100">
+      <h1 className="font-bold text-3xl">News API</h1>
+
+      <form className="form-control w-full max-w-[50%]">
+        <div className="input-group">
+          <input
+            type="text"
+            placeholder="Search…"
+            className="input input-bordered w-full"
+            required
+          />
+          <button className="btn btn-square">
+            <AiOutlineSearch className="text-2xl" />
+          </button>
+        </div>
+      </form>
+
+      <button
+        className="btn btn-ghost relative"
+        onClick={() => router.push("/")}
+      >
+        <AiOutlineHome className="text-2xl" />
+        <span className="sr-only">Go Home</span>
+      </button>
+    </header>
+  );
 }
