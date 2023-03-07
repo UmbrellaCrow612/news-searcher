@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 export default function GlobalLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="container mx-auto px-6 md:px-0">
+    <div className="container mx-auto px-6 md:px-0 w-full h-full">
       <Header />
       <main className="w-full h-full">{children}</main>
       <Footer />
