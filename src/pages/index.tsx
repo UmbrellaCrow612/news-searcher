@@ -1,10 +1,8 @@
-import useNews from "@/hooks/useNews";
-
 export default function Page() {
-  const { data } = useNews({ searchQuery: "apple", from:"2023-02-04" });
   return (
-    <section className="overflow-auto h-full max-h-full">
-      {JSON.stringify(data)}
+    <section className="overflow-auto h-full max-h-full flex items-center justify-center flex-col gap-5">
+      <h1 className="font-bold text-3xl md:text-5xl leading-tight">Search the news </h1>
+      <p className="text-xl md:text-2xl">Built by Yousaf Wazir</p>
     </section>
   );
 }
